@@ -2,19 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 //                  onClick passed down from TodoList
-const TodoItem = ({ onClick, completed, item }) => (
-	<li
-	onClick={onClick}
-	style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}>
-		{item}
-	</li>
+const TodoItem = ({ onItemClick, onDeleteClick, completed, deleted, item }) => (
+	<div>
+		<li
+		onClick={onItemClick}
+		style={{
+	      textDecoration: completed ? 'line-through' : 'none',
+	      display: deleted ? 'none' : 'inline-block'
+	    }}>
+			{item} 
+		</li>
+		<button onClick={onDeleteClick} style={{
+	      display: deleted ? 'none' : 'inline'
+	    }}>Remove</button>
+	</div>
 )
 
 TodoItem.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onItemClick: PropTypes.func.isRequired,
+  onDeleteClick: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
+  deleted: PropTypes.bool.isRequired,
   item: PropTypes.string.isRequired
 }
 

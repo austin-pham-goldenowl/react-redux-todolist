@@ -13,6 +13,14 @@ export const addTodo = item => ({
 
 //toggleTodo action
 export const toggleTodo = id => ({
-  type: 'TOGGLE_TODO',
-  id
-}) 
+	  type: 'TOGGLE_TODO',
+	  id
+	}
+)
+
+//deleteTodo action
+export const deleteTodo = id => ({
+	  type: 'DELETE_TODO',
+	  id
+  }
+ )

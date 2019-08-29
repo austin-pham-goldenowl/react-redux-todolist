@@ -9,7 +9,8 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           item: action.item,
-          completed: false
+          completed: false,
+          deleted: false,
         }
       ]
 
@@ -18,6 +19,13 @@ const todos = (state = [], action) => {
     //return state with completed state reversed
       return state.map(todo =>
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+      )
+
+    //delete todo reducer
+    case 'DELETE_TODO':
+    //return state with completed state reversed
+      return state.map(todo =>
+        todo.id === action.id ? { ...todo, deleted: !todo.deleted } : todo
       )
 
     default:
