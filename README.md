@@ -11,6 +11,7 @@ The classic To-Do application where a user can write down all the things he want
 -   [x] User can mark a to-do as `completed`
 -   [x] User can remove a to-do item by pressing on a button (or on the to-do item itself)
 -   [x] Authentication (hard coded)
+
 ![](./todolist3.gif)
 ## Bonus features
 
