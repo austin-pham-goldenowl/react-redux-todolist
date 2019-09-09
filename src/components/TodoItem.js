@@ -13,8 +13,9 @@ const TodoItem = ({ onItemClick, onDeleteClick, completed, deleted, item }) => (
 			{item} 
 		</li>
 		<button onClick={onDeleteClick} style={{
+			marginLeft: 10,
 	      display: deleted ? 'none' : 'inline'
-	    }}>Remove</button>
+	    }}>x</button>
 	</div>
 )
 

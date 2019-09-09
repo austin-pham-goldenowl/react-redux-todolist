@@ -3,7 +3,7 @@ import { toggleTodo, deleteTodo } from '../actions'
 import TodoList from '../components/TodoList'
 
 const mapStateToProps = state => ({
-  todos: state
+  todos: state.todos
 })
 
 const mapDispatchToProps = dispatch => ({

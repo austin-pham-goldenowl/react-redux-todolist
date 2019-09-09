@@ -3,9 +3,9 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 // import { createStore } from 'redux'
 // import rootReducer from './reducers'
-import App from './components/App'
+// import App from './components/App'
 import { store } from "./store"
-
+import LogIn from './containers/LogIn'
 // const store = createStore(rootReducer)
 
 // const render = () => {
@@ -23,7 +23,7 @@ import { store } from "./store"
 
 render(
   <Provider store={store}>
-    <App />
+    <LogIn />
   </Provider>,
   document.getElementById('root')
 )
