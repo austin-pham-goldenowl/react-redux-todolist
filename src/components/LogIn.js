@@ -19,6 +19,7 @@ import App from './App'
 import SnackbarContent from '@material-ui/core/SnackbarContent';
 // import IconButton from '@material-ui/core/IconButton';
 // import CloseIcon from '@material-ui/icons/Close';
+import 'typeface-roboto';
 
 // const useStyles = makeStyles(theme => ({
 //   '@global': {
@@ -55,11 +56,22 @@ class LogIn extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }  
 
+
+  onSubmit(e) {
+    e.preventDefault();
+    let { userName, password } = this.state;
+    this.props.login(userName, password);
+    this.setState({
+      userName: '',
+      password: ''
+    })  
+  }
+
   render() {
     let {userName, password} = this.state;
     let {isLoginSuccess, loginError, logout} = this.props;
 
-    console.log(isLoginSuccess);
+    // console.log(isLoginSuccess);
     if  (!isLoginSuccess) {
       return ( 
       <Container component="main" maxWidth="xs">
@@ -132,21 +144,18 @@ class LogIn extends React.Component {
         )} else {
         return (
           <div>
-          <div style={{textAlign:'right', marginRight: 10, marginBottom: 5}}> Hi An <button onClick={logout}>Logout</button></div>
-          <App/>
+          <div style={{textAlign:'right', marginRight: 10}}> 
+            <Typography variant="subtitle1" gutterBottom>
+              Hi An 
+              <Button color="secondary" onClick={logout} style={{marginLeft: 5}}>
+                Logout
+              </Button>
+            </Typography>
+          </div>
+            <App/>
           </div>)
       }
     }
-
-  onSubmit(e) {
-    e.preventDefault();
-    let { userName, password } = this.state;
-    this.props.login(userName, password);
-    this.setState({
-      userName: '',
-      password: ''
-    })  
-  }
 }
 
 export default LogIn;

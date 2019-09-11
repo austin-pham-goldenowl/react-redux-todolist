@@ -1,5 +1,6 @@
 //todos reducer
 const todos = (state = [], action) => {
+  
   switch (action.type) {
     //add todo reducer
     case 'ADD_TODO':
@@ -9,6 +10,8 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           item: action.item,
+          date: action.date.toISOString().substring(0, 10),
+          note: action.note,
           completed: false,
           deleted: false,
         }

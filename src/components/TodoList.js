@@ -4,13 +4,16 @@ import TodoItem from './TodoItem'
 
 const TodoList = ({ todos, toggleTodo, deleteTodo }) => (
 	//render TodoLis
-	<ul>
-	{todos.map(todo => 
-		<TodoItem key={todo.id} {...todo} 
-		onItemClick={() => toggleTodo(todo.id)} 
-		onDeleteClick={() => deleteTodo(todo.id)} 
-		/>)}	
-	</ul>
+	<div>
+    <center>
+    <br/>
+      {todos.map(todo => 
+      	<TodoItem key={todo.id} {...todo} 
+      	onItemClick={() => toggleTodo(todo.id)} 
+      	onDeleteClick={() => deleteTodo(todo.id)} 
+      />)}
+    </center>	
+	</div>
 )
 
 //propTypes
@@ -20,7 +23,9 @@ TodoList.propTypes = {
       id: PropTypes.number.isRequired,
       completed: PropTypes.bool.isRequired,
       deleted: PropTypes.bool.isRequired,
-      text: PropTypes.string.isRequired
+      item: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      note: PropTypes.string
     }).isRequired
   ).isRequired,
   toggleTodo: PropTypes.func.isRequired,

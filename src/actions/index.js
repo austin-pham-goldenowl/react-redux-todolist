@@ -4,11 +4,13 @@
 let nextTodoItem = 0
 
 //addTodo action
-export const addTodo = item => ({
+export const addTodo = (item, date, note) => ({
 	type: "ADD_TODO",
 	//id = nextTodoItem then +1
 	id: nextTodoItem++,
-	item
+	item,
+	date,
+	note
 })
 
 //toggleTodo action

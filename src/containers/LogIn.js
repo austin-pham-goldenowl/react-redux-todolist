@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     login: (userName, password) => dispatch(login(userName, password)),
     logout: () => dispatch(logout())
