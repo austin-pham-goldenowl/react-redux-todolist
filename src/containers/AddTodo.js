@@ -32,7 +32,7 @@ class AddTodo extends Component {
   }
 
   render(){  
-    const {addTodo} = this.props;
+    // const {addTodo} = this.props;
     let {item, date, note} = this.state;
 
     // console.log('date: ',this.state.date);
@@ -85,7 +85,7 @@ class AddTodo extends Component {
             variant="outlined"
           />
 
-          <Button variant="outlined" color="primary" type="submit" style={{display: 'block'}}>
+          <Button variant="outlined" color="primary" type="submit" style={{marginBottom: 15, float: 'right'}}>
             Add Todo
           </Button>
 

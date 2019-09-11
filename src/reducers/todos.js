@@ -10,7 +10,7 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           item: action.item,
-          date: action.date.toISOString().substring(0, 10),
+          date: (action.date.getDate()<10 ? ('0' + action.date.getDate()) : action.date.getDate()) + "-" + ((action.date.getMonth() + 1 < 10) ? ('0' + (action.date.getMonth() + 1)) : (action.date.getMonth() + 1)) + "-" + ((action.date.getFullYear()%100<10) ? ('0'+action.date.getFullYear()%100) : action.date.getFullYear()%100),
           note: action.note,
           completed: false,
           deleted: false,
