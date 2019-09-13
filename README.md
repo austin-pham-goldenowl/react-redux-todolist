@@ -10,10 +10,10 @@ The classic To-Do application where a user can write down all the things he want
 -   [x] User can remove a to-do item by pressing on a button (or on the to-do item itself)
 -   [x] Authentication (hard coded)
 
-![](./todolist4.gif)
+![](./DemoGif/todolist5.gif)
 ## Bonus features
 
--   [ ] User can edit a to-do
+-   [x] User can edit a to-do
 -   [ ] User can see a list with all the completed to-do's
 -   [ ] User can see a list with all the active to-do's
 -   [ ] User can see the date when he created the to-do
