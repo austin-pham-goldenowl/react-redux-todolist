@@ -1,21 +1,21 @@
 export function setLoginSuccess(isLoginSuccess) {
   return {
-    type: 'LOGIN_SUCCESS',
+    type: "LOGIN_SUCCESS",
     isLoginSuccess
   };
 }
 
 export function logout() {
   return {
-    type: 'LOGOUT_SUCCESS',
+    type: "LOGOUT_SUCCESS"
   };
 }
 
 export function setLoginError(loginError) {
   return {
-    type: 'LOGIN_ERROR',
+    type: "LOGIN_ERROR",
     loginError
-  }
+  };
 }
 
 export function login(userName, password) {
@@ -32,15 +32,15 @@ export function login(userName, password) {
     });
 
     // promiseCallAPILogin(username, password).then().catch(err)
-  }
+  };
 }
 
 function callLoginAPI(userName, password, callback) {
   setTimeout(() => {
-    if (userName === 'ptan' && password === '123456') {
+    if (userName === "ptan" && password === "123456") {
       return callback(null);
     } else {
-      return callback(new Error('Invalid email and password'));
+      return callback(new Error("Invalid email and password"));
     }
   }, 1000);
 }
