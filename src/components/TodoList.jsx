@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TodoItem from "./TodoItem";
+import TodoItemCont from "../containers/TodoItemCont";
 
 const TodoList = ({ todos, toggleTodo, deleteTodo, updateTodo }) => (
   //render TodoLis
@@ -8,7 +8,7 @@ const TodoList = ({ todos, toggleTodo, deleteTodo, updateTodo }) => (
     <center>
       <br />
       {todos.map(todo => (
-        <TodoItem
+        <TodoItemCont
           key={todo.id}
           {...todo}
           onItemClick={() => toggleTodo(todo.id)}

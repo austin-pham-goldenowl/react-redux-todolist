@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { store } from "./store"
 import LogIn from './containers/LogIn'
 // const store = createStore(rootReducer)
-import Main from './components/App'
+// import Main from './components/App'
 // const render = () => {
 // 	return(
 // 		<Provider store={store}>
